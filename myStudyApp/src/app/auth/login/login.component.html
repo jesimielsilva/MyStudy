@@ -1,0 +1,41 @@
+<div class="container-login">
+  <div id="card-login" class="card">
+    <img src="assets/img/design_livros_myStudy.png" class="card-img-top card-img-small" alt="Imagem de Login">
+    <div class="card-body">
+      <h5 class="card-title">Login</h5>      
+    </div>    
+    <div class="card-body">
+      <form (ngSubmit)="onLogin()" novalidate>
+        <div class="mb-3">
+          <label class="form-label">User</label>
+          <input  type="text" 
+                  class="form-control" 
+                  id="username" 
+                  aria-describedby="username"
+                  name="username"
+                  [(ngModel)]="login">          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input  type="password" 
+                  class="form-control" 
+                  id="exampleInputPassword1"
+                  name="password"
+                  [(ngModel)]="password">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary" >
+          Submit
+        </button>
+        
+        <div>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>        
+      </form>      
+    </div>
+  </div>
+</div>

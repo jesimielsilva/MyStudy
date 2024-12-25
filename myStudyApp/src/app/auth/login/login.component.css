@@ -1,0 +1,14 @@
+.card-img-small {
+    width: 150px;
+    height: auto;
+    margin: 0 auto; /* Centraliza a imagem dentro do card */
+    display: block; /* Garante que o margin auto funcione */
+}
+
+#card-login {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);       
+}
+  

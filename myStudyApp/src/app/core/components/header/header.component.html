@@ -1,0 +1,14 @@
+<!-- Header -->
+<header class="br-header compact">
+  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+
+    <div id="acessibilidade" class="d-flex flex-column flex-md-row align-items-center mt-3 mt-md-0 gap-3" *ngIf="!userLogged">
+
+      <a href="#" (click)="toggleContrast($event)" class="text-white text-decoration-none d-flex align-items-center">
+        <i [class]="isDarkMode ? 'fas fa-sun me-2' : 'fas fa-moon me-2'"style="background-color: blue;" >          
+        </i>        
+      </a>
+      
+    </div>    
+  </div>
+</header>

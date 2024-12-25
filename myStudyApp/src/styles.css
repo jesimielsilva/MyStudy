@@ -1,0 +1,143 @@
+:root {
+  --dark-bg: #1e1e1e;
+  --dark-bg-secondary: #2a2a2a;
+  --dark-bg-input: #3b3b3b;
+  --dark-bg-header: #202020;
+  --dark-bg-card-header: #333333;
+  --dark-color-text: #ffffff;
+  --dark-color-secondary: #e0e0e0;
+  --dark-color-link: #bb86fc;
+  --dark-border-color: #555;
+  --dark-border-card: #333;
+  --dark-shadow: rgba(0, 0, 0, 0.4);
+  --dark-placeholder: #cccccc;
+}
+
+body {
+  max-width: 100%;
+}
+
+/* Estilos gerais do modo escuro */
+.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-color-text);
+}
+
+/* Estilo adicional para links específicos */
+.dark-mode .br-item:hover,
+.dark-mode a {
+color: #ffffff !important;
+text-decoration: underline;
+background-color: var(--dark-bg-secondary);
+}
+
+.dark-mode #acessibilidade a, .acessibilidadeSpan span {
+background-color: var(--dark-bg);
+}
+
+/* Estilização específica para os textos */
+.dark-mode .br-item,
+.dark-mode .feedback,
+.dark-mode label,
+.dark-mode input::placeholder,
+.dark-mode .table-title,
+.dark-mode .modal-title {
+color: #ffffff !important;
+}
+
+
+
+/* Cards no modo escuro */
+.dark-mode .card,
+.dark-mode .br-card {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-color-secondary);
+  border: 1px solid var(--dark-border-card);
+  box-shadow: 0 4px 8px var(--dark-shadow);
+}
+
+  
+.dark-mode a:hover {
+  color: var(--dark-color-secondary);
+}
+
+/* Botões */
+.dark-mode .button,
+.dark-mode .br-button,
+.dark-mode .br-button.primary {
+  background-color: var(--dark-bg-card-header);
+  color: var(--dark-color-text);
+  border: 1px solid var(--dark-border-color);
+}
+
+.dark-mode .br-button.primary:hover {
+  background-color: #555; /* Pode ser ajustado conforme necessário */
+}
+
+/* Inputs */
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea,
+.dark-mode .br-input input {
+  background-color: var(--dark-bg-input);
+  color: var(--dark-color-text);
+  border: 1px solid var(--dark-border-color);
+}
+
+.dark-mode input::placeholder,
+.dark-mode .br-input input::placeholder {
+  color: var(--dark-placeholder);
+}
+
+/* Header */
+.dark-mode .br-header {
+  background-color: var(--dark-bg-header);
+  color: var(--dark-color-text);
+}
+
+.dark-mode .br-header a {
+  color: var(--dark-color-text);
+}
+
+.dark-mode .br-header a:hover {
+  color: var(--dark-color-secondary);
+}
+
+.dark-mode .br-header .img-fluid {
+  filter: brightness(0.8);
+}
+
+/* Modal */
+.dark-mode .br-modal {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-color-text);
+  border: 1px solid var(--dark-border-color);
+}
+
+.dark-mode .br-modal-header {
+  background-color: var(--dark-bg-card-header);
+}
+
+.dark-mode .br-modal-body {
+  background-color: var(--dark-bg);
+}
+
+.dark-mode .br-modal-body input::placeholder {
+  color: var(--dark-placeholder);
+}
+
+/* Tabela */
+.dark-mode .br-table {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-color-text);
+  border: 1px solid var(--dark-border-color);
+}
+
+.dark-mode .br-table th {
+  background-color: var(--dark-bg-card-header);
+  color: var(--dark-color-secondary);
+}
+
+.dark-mode .br-table tbody tr:hover {
+  background-color: #3d3d3d;
+}
