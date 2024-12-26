@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class LoginComponent {
   password: string = '';
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   onLogin(): void {
@@ -25,7 +27,8 @@ export class LoginComponent {
       next: (response) => {
         console.log('login bem sucedido', response);
         localStorage.setItem('token', response.token);
-        alert('Login realizado com sucesso!');        
+        alert('Login realizado com sucesso!'); 
+        this.router.navigate(['/home']);      
       },
       error: (error) => {
         console.error('erro ao logar', error);

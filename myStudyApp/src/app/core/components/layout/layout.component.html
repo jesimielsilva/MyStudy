@@ -1,11 +1,11 @@
-<div>
+<div class="box" *ngIf="isLoggedIn(); else noAuthLayout">
     <!-- Header -->
-    <div>
-      <app-header></app-header>
+    <div class="header">
+      <app-header (userLogout)="logout($event)" [userLogged]="userLogged"></app-header>
     </div>
     
     <!-- Body -->
-    <div>
+    <div class="body-component">
       <router-outlet></router-outlet>
     </div>   
     
@@ -14,3 +14,7 @@
         <app-footer ></app-footer>
     </div>
 </div>
+
+<ng-template #noAuthLayout>
+  <router-outlet></router-outlet>
+</ng-template>

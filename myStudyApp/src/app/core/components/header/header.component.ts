@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, Renderer2 } from '@angular/core';
+import { Component, EventEmitter, Inject, Input, Output, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,18 @@ import { Component, Inject, Renderer2 } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  @Input() userLogged: boolean = false;
+
+  @Output() userLogout = new EventEmitter<boolean>();
+
   isDarkMode: boolean = false;
+
+
+  
 
   constructor(
     private renderer: Renderer2,
+    private router: Router,
     @Inject(DOCUMENT) private document: Document
   ) {}
   
@@ -41,15 +50,13 @@ export class HeaderComponent {
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode;
   }
-
-
+  
+  logout() {
+    this.userLogout.emit(false);
+    this.router.navigateByUrl('/login');
+  }
 
   onGovLinkClick() {
     throw new Error('Method not implemented.');
     }
-userLogged: any;
-logout() {
-throw new Error('Method not implemented.');
-}
-
 }
