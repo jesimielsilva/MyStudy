@@ -1,0 +1,11 @@
+.box{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.body-component{
+    overflow: auto;
+    margin: 10px;    
+}

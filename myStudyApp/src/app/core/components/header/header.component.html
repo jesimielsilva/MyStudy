@@ -1,14 +1,35 @@
 <!-- Header -->
 <header class="br-header compact">
+
   <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+    
+    <a href="#" style="text-align: center;"  (click)="onGovLinkClick()">
+      <img src="/assets/img/logo_tela_inicial.png " alt="Logomarca My Study" class="img-fluid" style="max-width: 150px; object-fit: cover;" *ngIf="!userLogged">
+      <img class="image" src="/assets" alt="Logomarca My Study" class="img-fluid" style="max-width: 150px; object-fit: cover;" *ngIf="userLogged">
+    </a>
 
     <div id="acessibilidade" class="d-flex flex-column flex-md-row align-items-center mt-3 mt-md-0 gap-3" *ngIf="!userLogged">
-
       <a href="#" (click)="toggleContrast($event)" class="text-white text-decoration-none d-flex align-items-center">
         <i [class]="isDarkMode ? 'fas fa-sun me-2' : 'fas fa-moon me-2'"style="background-color: blue;" >          
         </i>        
-      </a>
-      
-    </div>    
+      </a>      
+    </div>
+
+    <div  id="acessibilidade" class="d-flex flex-column flex-md-row align-items-center mt-3 mt-md-0 gap-3" *ngIf="userLogged">
+      <div class="header-login">
+        <div class="header-sign-in">
+          <a href="#" (click)="toggleContrast($event)" class="text-white text-decoration-none d-flex align-items-center">
+            <i [class]="isDarkMode ? 'fas fa-sun me-2' : 'fas fa-moon me-2'"style="background-color: blue;" >          
+            </i>        
+          </a>      
+          <button type="button" 
+                  class="btn btn-outline-light"
+                  (click)="logout()"
+                  data-trigger="login">
+                  <span class="d-sm-inline">Sair</span>
+          </button>
+        </div>
+      </div>
+    </div>      
   </div>
 </header>
